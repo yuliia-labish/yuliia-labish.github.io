@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nisha Perfume case study · Yuliia Labish</title>
+  <meta name="description" content="How Yuliia Labish redesigned the Nisha Perfume website and app around how people choose a scent: volume from 2 ml, smart filters, a clear product page, a 3-step checkout and one design system.">
+  <link rel="canonical" href="https://yuliia-labish.github.io/cases/nisha-perfume.html">
+  <link rel="alternate" hreflang="en" href="https://yuliia-labish.github.io/cases/nisha-perfume.html">
+  <link rel="alternate" hreflang="uk" href="https://yuliia-labish.github.io/uk/cases/nisha-perfume.html">
+  <link rel="alternate" hreflang="x-default" href="https://yuliia-labish.github.io/cases/nisha-perfume.html">
+  <script>
+    document.documentElement.classList.add('js');
+    // the loading screen plays only on the first visit; later pages and language switches open at once
+    try { if (sessionStorage.getItem('yl-instant') || sessionStorage.getItem('yl-loaded')) document.documentElement.classList.add('no-curtain'); } catch (e) {}
+    if (window.innerWidth < 768) document.documentElement.classList.add('no-curtain');
+    setTimeout(function () {
+      var c = document.querySelector('.curtain'); if (c) c.classList.add('is-up');
+      document.querySelectorAll('img').forEach(function (i) { if (i.naturalWidth) i.classList.add('is-loaded'); });
+    }, 4000);
+  </script>
+  <link rel="icon" href="../assets/img/brand/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../assets/img/brand/apple-touch-icon.png">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Nisha Perfume case study · Yuliia Labish">
+  <meta property="og:description" content="How Yuliia Labish redesigned the Nisha Perfume website and app around how people choose a scent: volume from 2 ml, smart filters, a clear product page, a 3-step checkout and one design system.">
+  <meta property="og:url" content="https://yuliia-labish.github.io/cases/nisha-perfume.html">
+  <meta property="og:image" content="https://yuliia-labish.github.io/assets/img/og/nisha-perfume.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&family=Inter:wght@400;500;600&family=Wix+Madefor+Display:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+  <div class="curtain" aria-hidden="true">
+    <div class="curtain__inner"><span>Yuliia Labish</span><span class="curtain__count">0</span></div>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-open="Menu" data-close="Close">
+        <span class="menu-toggle__dot" aria-hidden="true"></span><span class="menu-toggle__label">Menu</span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Main">
+        <div class="lang" aria-label="Language">
+          <span aria-current="true">EN</span><a href="../uk/cases/nisha-perfume.html" hreflang="uk" lang="uk" aria-label="Українська версія">UA</a>
+        </div>
+        <ul class="nav__list">
+          <li><a href="../index.html#work">Work</a></li>
+          <li><a href="../index.html#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn--small header-cv" href="../assets/files/yuliia-labish-cv-en.pdf" download aria-label="Download resume (PDF)"><span class="header-cv__full">Download resume</span><span class="header-cv__short" aria-hidden="true">CV</span><span class="header-cv__arrow" aria-hidden="true">↓</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="case-hero" aria-labelledby="case-title">
+      <div class="container">
+        <div class="case-top">
+          <a class="case-back" href="../index.html"><span aria-hidden="true">←</span>Back to home</a>
+          <a class="case-back case-back--next" href="flamingo-new-homes.html" aria-label="Next case: Flamingo New Homes">Next case<span aria-hidden="true">→</span></a>
+        </div>
+        <p class="label">Case study · 2026</p>
+        <h1 class="case-hero__title" id="case-title">Nisha Perfume</h1>
+        <p class="case-hero__lead">A perfume store redesigned around how people actually choose a scent: website, iOS and Android app, and one design system for both.</p>
+        <dl class="case-facts">
+          <div><dt>Company</dt><dd>CodeGeeks</dd></div>
+          <div><dt>Role</dt><dd>Sole UX/UI Designer</dd></div>
+          <div><dt>Platforms</dt><dd>Website, iOS and Android app, design system</dd></div>
+          <div><dt>Status</dt><dd>Website released · <a href="https://nishaperfume.com.ua/" target="_blank" rel="noopener">live site<span aria-hidden="true">↗</span></a> · app in development</dd></div>
+        </dl>
+        <div class="case-cover"><picture><source media="(max-width: 767px)" srcset="../assets/img/cases/nisha-perfume-case-m.webp 744w, ../assets/img/cases/nisha-perfume-case-m-2x.webp 1488w" sizes="100vw" width="744" height="930"><img src="../assets/img/cases/nisha-perfume.webp" srcset="../assets/img/cases/nisha-perfume.webp 1200w, ../assets/img/cases/nisha-perfume-2x.webp 2400w" sizes="100vw" width="1200" height="750" alt="Nisha Perfume product page for Angels' Share on desktop and mobile: volume options from 2 ml, rating and add-to-cart." fetchpriority="high"></picture></div>
+      </div>
+    </section>
+
+    <section class="case-sec" aria-labelledby="task-title">
+      <div class="container">
+      <div class="case-sec__head reveal-up">
+        <p class="label">The task</p>
+        <h2 class="case-sec__title" id="task-title">A store that didn’t help people choose</h2>
+        <p class="case-sec__intro case-text">Nisha Perfume sells original and niche perfume in Ukraine, in full bottles and by the millilitre. The client came with a working website and app and wanted both improved, in UX and in UI.</p>
+      </div>
+        <div class="case-sec__body reveal-up">
+          <p class="case-text">The old store looked like a template and didn’t help people choose a scent:</p>
+          <ul class="case-points">
+            <li>banners in different styles, with no single message;</li>
+            <li>product cards with only a name and a price;</li>
+            <li>selling by the millilitre, the store’s strength, was hidden;</li>
+            <li>an Instagram block took the main place on the home page.</li>
+          </ul>
+        </div>
+        <div class="shots shots--two reveal-up">
+          <figure class="shot"><img src="../assets/img/cases/nisha/before-home.webp" width="1600" height="752" alt="The old Nisha home page: a green banner in a different style from the rest of the page." loading="lazy"><figcaption>The old home page</figcaption></figure>
+          <figure class="shot"><img src="../assets/img/cases/nisha/before-catalog.webp" width="1600" height="752" alt="The old Nisha catalog: product cards with only a photo, a name and a price." loading="lazy"><figcaption>The old catalog: name and price only</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-sec" aria-labelledby="how-title">
+      <div class="container">
+      <div class="case-sec__head reveal-up">
+        <p class="label">How I worked</p>
+        <h2 class="case-sec__title" id="how-title">From design sessions to handoff</h2>
+        <p class="case-sec__intro case-text">I was the only designer on the project and worked in a full team with developers, QA and a project manager.</p>
+      </div>
+        <ol class="case-steps case-sec__body reveal-up">
+          <li>Design sessions with the client to talk through problems and ideas.</li>
+          <li>Competitor analysis on the Ukrainian market, to solve the client’s business problems and see how others work.</li>
+          <li>Information architecture, agreed with the client before any design.</li>
+          <li>UX audit of the old website and app.</li>
+          <li>User flows, wireframes, UI and prototypes in Figma and Claude Design.</li>
+          <li>Handoff to developers and checks that the build matches the design.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="case-sec" aria-labelledby="dec-title">
+      <div class="container">
+        <div class="case-sec__head reveal-up">
+          <p class="label">Key decisions</p>
+          <h2 class="case-sec__title" id="dec-title">What changed and why</h2>
+        </div>
+        <div class="case-sec__body">
+        <article class="decision reveal-up">
+          <h3 class="decision__title">One clear message on the home page</h3>
+          <div class="decision__body">
+            <p><span class="decision__tag">Problem</span>The home page had no focus: banners in different styles and an Instagram block in the main spot.</p>
+            <p><span class="decision__tag">Decision</span>One message in the hero, try any scent in a small volume; top brands and “New & bestsellers” right after it; dark warm banners with one green accent.</p>
+          </div>
+          <div class="shots shots--desk-phone">
+            <figure class="shot"><img src="../assets/img/cases/nisha/home-desktop.webp" width="1440" height="1500" alt="New Nisha home page on desktop: dark hero “Atmospheric scents”, top brands and new arrivals." loading="lazy"><figcaption>Home page, desktop</figcaption></figure>
+            <figure class="shot shot--phone"><img src="../assets/img/cases/nisha/home-mobile.webp" width="390" height="813" alt="New Nisha home page on mobile with the same dark hero." loading="lazy"><figcaption>Mobile</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="decision reveal-up">
+          <h3 class="decision__title">Choose a volume right in the catalog</h3>
+          <div class="decision__body">
+            <p><span class="decision__tag">Problem</span>Selling by the millilitre was hidden; cards showed only a name and a price.</p>
+            <p><span class="decision__tag">Decision</span>Volume from 2 ml right in the catalog card, with price per ml, rating, reviews, favourites and a gender tag in one block. The card has three states: default, hover and volume selected.</p>
+          </div>
+          <div class="shots shots--row">
+            <figure class="shot shot--tall shot--bare"><img src="../assets/img/cases/nisha/card-default.webp" width="410" height="722" alt="Product card in its default state: bottle, brand, rating and volume options from 2 ml." loading="lazy"><figcaption>Default</figcaption></figure>
+            <figure class="shot shot--tall shot--bare"><img src="../assets/img/cases/nisha/card-hover.webp" width="410" height="722" alt="Product card on hover with the “Choose volume” button." loading="lazy"><figcaption>Hover</figcaption></figure>
+            <figure class="shot shot--tall shot--bare"><img src="../assets/img/cases/nisha/card-selected.webp" width="410" height="722" alt="Product card with 5 ml selected and the price shown on the button." loading="lazy"><figcaption>Volume selected</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="decision reveal-up">
+          <h3 class="decision__title">Filters that match how people search</h3>
+          <div class="decision__body">
+            <p><span class="decision__tag">Problem</span>Seven closed dropdowns: people had to open each one to see what was inside.</p>
+            <p><span class="decision__tag">Decision</span>An A–Z brand index and favourite brands; chips for gender, volume, fragrance type, concentration and season; including and excluding notes (top, heart, base); a price per ml range.</p>
+          </div>
+          <div class="shots shots--row">
+            <figure class="shot shot--tall"><img src="../assets/img/cases/nisha/filters-before.webp" width="532" height="1052" alt="Old filters: a long closed list of brands and more dropdowns below it." loading="lazy"><figcaption>Before: closed dropdowns</figcaption></figure>
+            <figure class="shot shot--phone shot--tall"><img src="../assets/img/cases/nisha/filters-after-1.webp" width="390" height="844" alt="New mobile filters: an A–Z brand index, favourite brands and a short brand list." loading="lazy"><figcaption>After: brands A–Z and favourites</figcaption></figure>
+            <figure class="shot shot--phone shot--tall"><img src="../assets/img/cases/nisha/filters-after-2.webp" width="390" height="844" alt="New mobile filters: ingredients that switch between include, exclude and neutral with each tap." loading="lazy"><figcaption>After: include or exclude notes</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="decision reveal-up">
+          <h3 class="decision__title">A product page that explains the scent</h3>
+          <div class="decision__body">
+            <p><span class="decision__tag">Problem</span>People couldn’t tell how a perfume smells or how long it lasts before buying.</p>
+            <p><span class="decision__tag">Decision</span>A note pyramid in plain words, longevity and sillage scales, “96% bought again”, reviews that show the purchased volume, and a sticky buy bar on mobile.</p>
+          </div>
+          <div class="shots shots--desk-phone">
+            <figure class="shot shot--before"><img src="../assets/img/cases/nisha/before-product.webp" width="1100" height="932" alt="The old Nisha product page: a photo, the price per ml, volume buttons from 3 to 30 ml and a Buy button, with a plain description below." loading="lazy"><figcaption>Before: the old product page</figcaption></figure>
+            <figure class="shot"><img src="../assets/img/cases/nisha/product-desktop.webp" width="1440" height="1120" alt="Product page for Angels' Share on desktop: volumes, price per ml, add to cart and the note pyramid." loading="lazy"><figcaption>Product page, desktop</figcaption></figure>
+            <figure class="shot shot--phone"><img src="../assets/img/cases/nisha/product-mobile.webp" width="390" height="844" alt="Product page for Angels' Share on mobile: volume picker with 3 ml selected and a sticky add-to-cart bar." loading="lazy"><figcaption>Mobile</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="decision reveal-up">
+          <h3 class="decision__title">Checkout in three steps</h3>
+          <div class="decision__body">
+            <p><span class="decision__tag">Problem</span>A long checkout without a clear end.</p>
+            <p><span class="decision__tag">Decision</span>Cart, Checkout, Done, with the summary always in view; saved Home and Work addresses; Nisha Coins with one toggle and a slider; monobank, cards, Apple and Google Pay, instalments and cash on delivery.</p>
+          </div>
+          <div class="shots">
+            <figure class="shot shot--before"><img src="../assets/img/cases/nisha/before-checkout.webp" width="1100" height="1054" alt="The old Nisha checkout: one long form with name, phone, email, city and branch, and a short order summary on the side." loading="lazy"><figcaption>Before: the old checkout</figcaption></figure>
+            <figure class="shot"><img src="../assets/img/cases/nisha/checkout.webp" width="1100" height="1337" alt="Checkout for a signed-in customer: contact details, saved addresses, delivery, payment and an order summary with Nisha Coins." loading="lazy"><figcaption>Checkout with the summary always in view</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="decision reveal-up">
+          <h3 class="decision__title">Build your own set</h3>
+          <div class="decision__body">
+            <p><span class="decision__tag">Problem</span>People ordered perfume sets through Instagram: they had to write which scents they wanted, how many millilitres and how many vials.</p>
+            <p><span class="decision__tag">Decision</span>A set builder on the website, a new feature the client asked for and we designed together. Pick a box (5 × 3 ml, 3 × 5 ml or 5 × 5 ml), add scents with search and filters, and the set summary with the total updates as you go.</p>
+          </div>
+          <div class="shots shots--desk-phones">
+            <figure class="shot"><img src="../assets/img/cases/nisha/set-builder.webp" width="1100" height="1375" alt="Set builder on desktop: three box options with photos, a scent list with search and filters, and the set summary with five scents and the total price." loading="lazy"><figcaption>Set builder, desktop</figcaption></figure>
+            <div class="shots__phones">
+              <figure class="shot shot--phone"><img src="../assets/img/cases/nisha/set-builder-m1.webp" width="390" height="844" alt="Set builder on mobile, step 1: box size and type, with a sticky “Add set” button and the price." loading="lazy"><figcaption>1. Box</figcaption></figure>
+              <figure class="shot shot--phone"><img src="../assets/img/cases/nisha/set-builder-m2.webp" width="390" height="844" alt="Set builder on mobile, step 2: scent search, filter chips and a list with selected scents checked." loading="lazy"><figcaption>2. Scents</figcaption></figure>
+              <figure class="shot shot--phone"><img src="../assets/img/cases/nisha/set-builder-m3.webp" width="390" height="844" alt="Set builder on mobile: the set summary with five scents, packaging and the total." loading="lazy"><figcaption>3. Set summary</figcaption></figure>
+            </div>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-sec" aria-labelledby="app-title">
+      <div class="container">
+      <div class="case-sec__head reveal-up">
+        <p class="label">Mobile app</p>
+        <h2 class="case-sec__title" id="app-title">A store that knows you</h2>
+        <p class="case-sec__intro case-text">The iOS and Android app adds what a website can’t: a personal feed, gifts and loyalty in one place.</p>
+      </div>
+        <div class="case-sec__body">
+        <article class="decision reveal-up">
+          <h3 class="decision__title">A short quiz, then a personal feed</h3>
+          <div class="decision__body">
+            <p>Four quick steps: which scents, which families, favourite brands and when you plan to wear them. The app then picks scents for that taste and opens the “Specially for you” feed.</p>
+          </div>
+          <div class="shots shots--row">
+            <figure class="shot shot--phone"><img src="../assets/img/cases/nisha/quiz-1.webp" width="390" height="844" alt="Quiz step 1 of 4: women’s, men’s or unisex scents." loading="lazy"><figcaption>1. Which scents</figcaption></figure>
+            <figure class="shot shot--phone"><img src="../assets/img/cases/nisha/quiz-2.webp" width="390" height="844" alt="Quiz step 2 of 4: scent families such as woody and amber, with example notes." loading="lazy"><figcaption>2. Scent families</figcaption></figure>
+            <figure class="shot shot--phone"><img src="../assets/img/cases/nisha/quiz-3.webp" width="390" height="844" alt="Quiz step 3 of 4: favourite brands shown as logo tiles." loading="lazy"><figcaption>3. Favourite brands</figcaption></figure>
+            <figure class="shot shot--phone"><img src="../assets/img/cases/nisha/quiz-4.webp" width="390" height="844" alt="Quiz step 4 of 4: when you plan to wear the scent." loading="lazy"><figcaption>4. When to wear</figcaption></figure>
+            <figure class="shot shot--phone"><img src="../assets/img/cases/nisha/quiz-5.webp" width="390" height="844" alt="Quiz done: 24 scents picked for your taste and 50 Nisha Coins as a welcome gift." loading="lazy"><figcaption>Done: picks for your taste</figcaption></figure>
+            <figure class="shot shot--phone"><img src="../assets/img/cases/nisha/app-feed.webp" width="390" height="844" alt="App home with the Nisha Coins balance at the top and the “Specially for you” feed." loading="lazy"><figcaption>“Specially for you” feed</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="decision reveal-up">
+          <h3 class="decision__title">Hint about a gift</h3>
+          <div class="decision__body">
+            <p>Right from the product page, people can send a partner or a friend a hint: who it’s for, their email, the occasion and a message, with a preview of the email.</p>
+          </div>
+          <div class="shots shots--row">
+            <figure class="shot shot--phone"><img src="../assets/img/cases/nisha/app-product-hint.webp" width="390" height="844" alt="App product page for Black Phantom with volume options and the “Hint about a gift” button." loading="lazy"><figcaption>Product page with the hint button</figcaption></figure>
+            <figure class="shot shot--phone"><img src="../assets/img/cases/nisha/hint-empty.webp" width="390" height="988" alt="“Hint about a gift” sheet over the product page: recipient, email, occasion, message and an email preview with a gift icon." loading="lazy"><figcaption>The hint form</figcaption></figure>
+            <figure class="shot shot--phone"><img src="../assets/img/cases/nisha/hint-filled.webp" width="390" height="1004" alt="The hint form filled in, with a preview of the email the recipient will get." loading="lazy"><figcaption>Filled in, with the email preview</figcaption></figure>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-sec" aria-labelledby="ds-title">
+      <div class="container">
+      <div class="case-sec__head reveal-up">
+        <p class="label">Design system</p>
+        <h2 class="case-sec__title" id="ds-title">One system for web, iOS and Android</h2>
+        <p class="case-sec__intro case-text">I built it from scratch together with Claude: one set of tokens and components for the website and the iOS and Android app.</p>
+      </div>
+        <div class="case-sec__body">
+        <article class="decision reveal-up">
+          <h3 class="decision__title">Foundations</h3>
+          <div class="decision__body">
+            <p>Color, type and spacing tokens: a green accent on warm neutrals, Commissioner for headings and prices, Inter for the interface, and spacing on a 4 px grid.</p>
+          </div>
+          <div class="shots">
+            <figure class="shot"><img src="../assets/img/cases/nisha/ds-colors.webp" width="1100" height="494" alt="Nisha color tokens: brand and semantic colors, text hierarchy and dark brand colors, each with its hex value." loading="lazy"><figcaption>Color tokens</figcaption></figure>
+            <figure class="shot"><img src="../assets/img/cases/nisha/ds-type.webp" width="1100" height="793" alt="Nisha type scale: Commissioner display styles and Inter body and interface styles, with sizes and token names." loading="lazy"><figcaption>Type scale</figcaption></figure>
+            <figure class="shot"><img src="../assets/img/cases/nisha/ds-spacing.webp" width="1100" height="370" alt="Spacing scale on a 4 px grid from 4 to 64 px, and corner radii from 0 to pill." loading="lazy"><figcaption>Spacing and radii</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="decision reveal-up">
+          <h3 class="decision__title">Every component in every state</h3>
+          <div class="decision__body">
+            <p>Components are drawn in all their states and sizes. The volume picker has default, hover, selected and disabled in four sizes; the note filter has a third state, exclude.</p>
+          </div>
+          <div class="shots shots--states">
+            <figure class="shot"><img src="../assets/img/cases/nisha/ds-volume.webp" width="800" height="418" alt="Volume picker component in four states (default, hover, selected, disabled) and four sizes." loading="lazy"><figcaption>Volume picker: 4 states × 4 sizes</figcaption></figure>
+            <figure class="shot"><img src="../assets/img/cases/nisha/ds-checkbox.webp" width="373" height="400" alt="Note filter checkbox in three states: off, on and excluded." loading="lazy"><figcaption>Note filter: off, on, excluded</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="decision reveal-up">
+          <h3 class="decision__title">One system for the website and the app</h3>
+          <div class="decision__body">
+            <p>The same mobile menu works in three versions: in the app, for a guest on the website and for a signed-in customer with their Nisha Coins.</p>
+          </div>
+          <div class="shots">
+            <figure class="shot"><img src="../assets/img/cases/nisha/ds-drawer.webp" width="1100" height="717" alt="Mobile menu component in three versions: app, website guest and signed-in customer with a Nisha Coins balance." loading="lazy"><figcaption>Mobile menu: app, guest, signed in</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="decision reveal-up">
+          <h3 class="decision__title">Ready for developers</h3>
+          <div class="decision__body">
+            <p>Shadow and z-index scales with clear rules, so developers use tokens instead of “magic” numbers.</p>
+          </div>
+          <div class="shots shots--two">
+            <figure class="shot"><img src="../assets/img/cases/nisha/ds-shadow.webp" width="600" height="536" alt="Shadow tokens for card hover, banner hover and dropdowns, with values and where to use them." loading="lazy"><figcaption>Shadow tokens</figcaption></figure>
+            <figure class="shot"><img src="../assets/img/cases/nisha/ds-zindex.webp" width="600" height="612" alt="Z-index scale from base to tooltip in steps of 10, with rules for developers." loading="lazy"><figcaption>Z-index scale and rules</figcaption></figure>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-sec" aria-labelledby="status-title">
+      <div class="container">
+      <div class="case-sec__head reveal-up">
+        <p class="label">Status</p>
+        <h2 class="case-sec__title" id="status-title">Website released</h2>
+        <p class="case-sec__intro case-text">The new website went live in November 2026. The team is still building the app.</p>
+      </div>
+        <div class="case-sec__body reveal-up">
+          <a class="btn" href="https://nishaperfume.com.ua/" target="_blank" rel="noopener">Visit the live site<span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <nav class="case-next" aria-label="All cases">
+      <div class="container case-end">
+        <a class="next-card" href="flamingo-new-homes.html">
+          <span class="label next-card__label">Next case</span>
+          <span class="next-card__name">Flamingo New Homes</span>
+          <span class="next-card__type">Real estate marketplace · Web, mobile, admin panel</span>
+          <span class="next-card__arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="case-back case-end__all" href="../index.html#work"><span aria-hidden="true">←</span>All cases</a>
+      </div>
+    </nav>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="footer__head">
+        <img class="footer__avatar" src="../assets/img/photo/yuliia-labish-avatar.jpg" width="144" height="192" alt="" loading="lazy">
+        <h2 class="footer__title">Let's create something <span class="footer__pair">great <span class="nowrap">together <span class="footer__heart" aria-hidden="true"></span></span></span></h2>
+      </div>
+      <p class="footer__note">Thank you for your time. I'd be happy to talk about your product, your team and how I can help.</p>
+      <ul class="contacts">
+        <li><a class="btn btn--dark" href="mailto:yuliia.labish@gmail.com">yuliia.labish@gmail.com</a></li>
+        <li><a class="btn btn--dark" href="https://t.me/yulia_labish" target="_blank" rel="noopener">Telegram<span aria-hidden="true">↗</span></a></li>
+        <li><a class="btn btn--dark" href="https://www.linkedin.com/in/yuliia-labish" target="_blank" rel="noopener">LinkedIn<span aria-hidden="true">↗</span></a></li>
+        <li><a class="btn btn--dark" href="../assets/files/yuliia-labish-cv-en.pdf" download>Download resume<span aria-hidden="true">↓</span></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <a class="float-cta float-cta--with-top" href="#contact">Get in touch</a>
+  <button class="to-top" type="button" aria-label="Back to top"><span aria-hidden="true">↑</span></button>
+  <div class="cursor" aria-hidden="true">View</div>
+
+  <script src="../assets/js/main.js" defer></script>
+</body>
+</html>

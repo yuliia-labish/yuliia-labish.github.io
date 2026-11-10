@@ -1,0 +1,12 @@
+# Only the site itself goes to the public repository.
+# Private materials, working notes and tool settings stay on this computer.
+materials/
+CLAUDE.md
+design-system.md
+site-structure.md
+.claude/
+
+# system files
+.DS_Store
+*.icloud
+.*.icloud
