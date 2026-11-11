@@ -977,6 +977,15 @@ h1, h2, h3 { font-weight: 500; }
   font-size: var(--text-h1);
   line-height: 1;
 }
+/* phones: always three lines, "Let's create / something great / together", "Час створити / щось особливе / разом".
+   The longest of them ("something great") is about 7.45em wide, so the title is at most 7.7em wide
+   and the font shrinks a little on narrow screens until 7.7em fits between the margins */
+@media (max-width: 767px) {
+  .footer__title {
+    max-width: 7.7em;
+    font-size: min(var(--text-h1), (100vw - var(--margin) * 2) / 7.7);
+  }
+}
 /* low desktop windows (old 13" laptops): a smaller photo and less air, so the whole footer still fits the screen */
 @media (min-width: 768px) and (max-height: 760px) {
   .site-footer { padding: var(--space-7) 0; }
