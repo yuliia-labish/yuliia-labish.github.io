@@ -483,11 +483,14 @@ h1, h2, h3 { font-weight: 500; }
 
 /* phone: photo across the content width, the name overlapping its bottom, then location and role */
 .hero {
-  /* the bottom edge of the photo cuts the name at half the height of the capitals:
+  /* desktop: the bottom edge of the photo cuts the name at half the height of the capitals,
      the top half of the letters over the photo is white, the bottom half black.
+     phones: the whole first name sits on the photo in white, the last name below it in black;
+     the photo edge runs in the gap between the two lines.
      Inter: ascent 0.969em, descent 0.242em, capitals 0.727em → with line-height L the baseline is
-     (L + 0.727) / 2 from the top of the line; half the capitals is 0.364em above it */
-  --name-baseline-stack: calc(var(--text-display-stack) * 0.43);  /* L = 0.86, phones: from the top of the first line */
+     (L + 0.727) / 2 from the top of the line (0.79em for L = 0.86); the tallest marks of the
+     second line (the dot of «і») start at 0.90em, so the edge at 0.85em leaves the same gap on both sides */
+  --name-baseline-stack: calc(var(--text-display-stack) * 0.85);  /* L = 0.86, phones: from the top of the first line */
   --name-below-baseline: calc(var(--text-display) * 0.46);        /* L = 0.92, desktop: from the bottom of the line */
   position: relative;
   display: flex;
@@ -497,24 +500,32 @@ h1, h2, h3 { font-weight: 500; }
   overflow: hidden;
 }
 
-/* phones: the arch shrinks with the screen height, so buttons, photo, name and the
-   "Based in" row always fit one screen. Height left for the photo = screen − top padding
+/* phones: a tall 2 : 3 arch that shrinks with the screen height, so buttons, photo, name and the
+   "Based in" row fit one screen. Height left for the photo = screen − top padding
    − meta row (gap + two lines) − bottom padding − the part of the name below the photo
-   (two lines × 0.86 minus the 0.43em of the first line that overlaps the photo ≈ 1.29em); width = height × 3/4 */
+   (two lines × 0.86 minus the 0.85em of the first line on the photo ≈ 0.87em); width = height × 2/3.
+   It is never narrower than the first name ("Yuliia" ≈ 2.14em) plus air on both sides (2.45em),
+   so the first name always lies fully on the photo; on very short screens the hero then scrolls. */
 .hero__photo {
   position: relative;
-  width: min(
-    100% - var(--margin) * 2,
-    var(--size-photo),
-    (100vh - var(--space-9) - var(--space-5) * 2 - var(--text-small) * 3 - var(--text-display-stack) * 1.29) * 0.75
+  width: max(
+    var(--text-display-stack) * 2.45,
+    min(
+      100% - var(--margin) * 2,
+      var(--size-photo),
+      (100vh - var(--space-9) - var(--space-5) * 2 - var(--text-small) * 3 - var(--text-display-stack) * 0.87) * 2 / 3
+    )
   );
-  width: min(
-    100% - var(--margin) * 2,
-    var(--size-photo),
-    (100svh - var(--space-9) - var(--space-5) * 2 - var(--text-small) * 3 - var(--text-display-stack) * 1.29) * 0.75
+  width: max(
+    var(--text-display-stack) * 2.45,
+    min(
+      100% - var(--margin) * 2,
+      var(--size-photo),
+      (100svh - var(--space-9) - var(--space-5) * 2 - var(--text-small) * 3 - var(--text-display-stack) * 0.87) * 2 / 3
+    )
   );
   margin: 0 auto;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 2 / 3;
   overflow: hidden;
   border-radius: var(--radius-pill) var(--radius-pill) 0 0; /* arch with a straight bottom: the name changes colour along a crisp line */
   background: var(--surface);
@@ -585,6 +596,7 @@ h1, h2, h3 { font-weight: 500; }
     bottom: calc(var(--space-5) + var(--name-below-baseline)); /* the photo edge runs through the middle of the name */
     /* fits between the header and its own bottom edge, which now sits higher, in the middle of the name */
     width: min(var(--photo-share), var(--size-photo), calc((100svh - var(--header-h) - var(--space-5) * 2 - var(--name-below-baseline)) * 0.75));
+    aspect-ratio: 3 / 4; /* desktop keeps the classic arch; phones use the taller 2 : 3 */
     min-height: 0; /* keep the 3:4 arch: without it the taller parallax image stretches the frame */
     margin: 0;
     transform: translateX(-50%);
