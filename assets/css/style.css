@@ -1207,7 +1207,10 @@ h1, h2, h3 { font-weight: 500; }
 /* a panel or dialog that would look oversized at full width */
 .shot--narrow { justify-self: center; width: min(100%, calc(var(--space-11) * 4)); }
 .shot img { display: block; width: 100%; height: auto; border: var(--border) solid var(--line); border-radius: var(--radius-s); background: var(--accent-contrast); }
-.shot--phone img { border-radius: var(--radius-m); }
+/* phone screens: corners like a real iPhone, about 13 % of the width (iPhone 15: 55 / 393 pt),
+   the same in every case. It is larger than the corners some exports already have (Lumina: up to
+   80 px on a 786 px image), so the grey left outside those baked corners never shows */
+.shot--phone img, .shot--phone .shot__media { border-radius: 13% / 6%; }
 .shot--bare img { border: 0; border-radius: 0; background: none; }
 .shot--tall img { width: auto; max-width: 100%; max-height: calc(var(--space-11) * 4.5); margin: 0 auto; }
 .shot figcaption { margin-top: var(--space-3); text-align: center; font-size: var(--text-small); line-height: 1.5; color: var(--text-muted); }
