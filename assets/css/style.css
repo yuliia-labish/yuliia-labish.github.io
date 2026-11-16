@@ -91,6 +91,8 @@
   --stagger: 60ms;
   --ease: cubic-bezier(0.76, 0, 0.24, 1);
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --scale-hover: 1.06;   /* case cover zoom on hover */
+  --scale-scroll: 1.08;  /* case cover zoom while the card scrolls into view */
 }
 
 @media (min-width: 768px) {
@@ -749,17 +751,36 @@ h1, h2, h3 { font-weight: 500; }
   transition: transform var(--dur-slower) var(--ease-out);
 }
 /* at rest the whole cover shows; it zooms in only on hover */
-.card:hover .card__media img { transform: scale(1.06); }
+.card:hover .card__media img { transform: scale(var(--scale-hover)); }
+/* the cover is there from the start; while the card scrolls into view the picture inside the
+   frame settles from a slight zoom to its full size, in step with the scroll (no timer, nothing
+   hidden). It uses `scale`, so it adds up with the hover `transform`. Browsers without
+   scroll-driven animations simply show the cover still (16.11.2026, replaced the bottom-up wipe) */
+@supports (animation-timeline: view()) {
+  /* the timeline follows the frame, not the picture: the frame clips its content, so it
+     counts as a scroller of its own and the picture would always look fully in view */
+  .card__media { view-timeline: --cover block; }
+  .card__media img {
+    animation: cover-settle linear both;
+    animation-timeline: --cover;
+    animation-range: entry 0% cover 50%;
+  }
+}
+@keyframes cover-settle {
+  from { scale: var(--scale-scroll); }
+  to { scale: 1; }
+}
 
 /* reveal on scroll */
-.js .reveal-img { clip-path: inset(100% 0 0 0); transition: clip-path var(--dur-slower) var(--ease); }
-.js .reveal-img.is-in { clip-path: inset(0 0 0 0); }
 .js .reveal-up {
   opacity: 0;
   transform: translateY(var(--space-7));
   transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
 }
 .js .reveal-up.is-in { opacity: 1; transform: none; }
+/* case cards on the home page: the text under a cover only fades in with a small lift */
+.js .card__body.reveal-up { transform: translateY(var(--space-3)); }
+.js .card__body.reveal-up.is-in { transform: none; }
 
 .card__body {
   display: grid;
@@ -1109,7 +1130,6 @@ h1, h2, h3 { font-weight: 500; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }
-  .js .reveal-img { clip-path: none; }
   .js .reveal-up { opacity: 1; transform: none; }
   .js .strengths li::after, .js .strengths::after { transform: none; }
   .js .strengths li::before, .js .strengths strong, .js .strengths li > span { opacity: 1; transform: none; }

@@ -237,7 +237,7 @@
       if (e.target === list && list.classList.contains('is-in')) list.classList.add('is-done');
     });
   });
-  var revealables = document.querySelectorAll('.reveal-img, .reveal-up, [data-list]');
+  var revealables = document.querySelectorAll('.reveal-up, [data-list]');
   var shimmer = document.querySelector('.footer__title');
   if (shimmer) {
     // the heart gets the same gradient as the text, placed where it sits in the title
