@@ -500,32 +500,16 @@ h1, h2, h3 { font-weight: 500; }
   overflow: hidden;
 }
 
-/* phones: a tall 2 : 3 arch that shrinks with the screen height, so buttons, photo, name and the
-   "Based in" row fit one screen. Height left for the photo = screen − top padding
-   − meta row (gap + two lines) − bottom padding − the part of the name below the photo
-   (two lines × 0.86 minus the 0.85em of the first line on the photo ≈ 0.87em); width = height × 2/3.
-   It is never narrower than the first name ("Yuliia" ≈ 2.14em) plus air on both sides (2.45em),
-   so the first name always lies fully on the photo; on very short screens the hero then scrolls. */
+/* phones: a 3 : 4 arch the full width of the content, with the same side margins as the rest
+   of the page (decided 16.11.2026: the old 2 : 3 arch shrank with the screen height and left wider
+   margins in Safari). At 3 : 4 its height stays close to the old arch, so photo, name and the
+   "Based in" row still fit most phone screens; on very short screens the hero scrolls.
+   The first name ("Yuliia" ≈ 2.14em) always lies fully on the photo: the photo is ≈ 2.8em wide. */
 .hero__photo {
   position: relative;
-  width: max(
-    var(--text-display-stack) * 2.45,
-    min(
-      100% - var(--margin) * 2,
-      var(--size-photo),
-      (100vh - var(--space-9) - var(--space-5) * 2 - var(--text-small) * 3 - var(--text-display-stack) * 0.87) * 2 / 3
-    )
-  );
-  width: max(
-    var(--text-display-stack) * 2.45,
-    min(
-      100% - var(--margin) * 2,
-      var(--size-photo),
-      (100svh - var(--space-9) - var(--space-5) * 2 - var(--text-small) * 3 - var(--text-display-stack) * 0.87) * 2 / 3
-    )
-  );
+  width: min(100% - var(--margin) * 2, var(--size-photo));
   margin: 0 auto;
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 3 / 4;
   overflow: hidden;
   border-radius: var(--radius-pill) var(--radius-pill) 0 0; /* arch with a straight bottom: the name changes colour along a crisp line */
   background: var(--surface);
